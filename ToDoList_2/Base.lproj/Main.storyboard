@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vHJ-EL-cgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vHJ-EL-cgg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -23,39 +23,44 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-iH-hQN">
-                                            <rect key="frame" x="20" y="20" width="0.0" height="0.0"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4I-0o-gvr">
-                                            <rect key="frame" x="383.5" y="19" width="22.5" height="22"/>
-                                            <state key="normal" image="checkmark.seal" catalog="system"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="im7-oL-c35">
+                                            <rect key="frame" x="366" y="14.5" width="36" height="31.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="3RL-mv-1OG"/>
+                                                <constraint firstAttribute="width" constant="36" id="BPP-Bx-IMQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-k5-w9w">
+                                            <rect key="frame" x="370" y="14.5" width="36" height="31.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="8py-yD-i0I"/>
+                                                <constraint firstAttribute="height" constant="30" id="qLG-ZZ-fb9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="las-M4-8Ya">
+                                            <rect key="frame" x="366" y="15" width="36" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="3SU-h1-6cw"/>
+                                                <constraint firstAttribute="height" constant="30" id="dRW-Ud-mWj"/>
+                                            </constraints>
+                                            <state key="normal" title="         "/>
                                             <connections>
-                                                <action selector="actionSealCheckmarkButton:" destination="CU8-4X-j4N" eventType="touchUpInside" id="Ttn-H8-ud7"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rP-7e-bS2">
-                                            <rect key="frame" x="383.5" y="19" width="22.5" height="22"/>
-                                            <state key="normal" image="checkmark.seal.fill" catalog="system"/>
-                                            <connections>
-                                                <action selector="actionFillCheckmarkButton:" destination="CU8-4X-j4N" eventType="touchUpInside" id="ubK-2Y-0sr"/>
+                                                <action selector="actionCheckmarkButton:" destination="CU8-4X-j4N" eventType="touchUpInside" id="Bug-Tw-9ch"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="4rP-7e-bS2" secondAttribute="trailing" constant="8" id="AzD-vg-oaU"/>
-                                        <constraint firstItem="M4I-0o-gvr" firstAttribute="centerY" secondItem="D5P-x2-Ip7" secondAttribute="centerY" id="Me6-4P-7PQ"/>
-                                        <constraint firstAttribute="trailing" secondItem="M4I-0o-gvr" secondAttribute="trailing" constant="8" id="kvL-Aw-lcw"/>
-                                        <constraint firstItem="4rP-7e-bS2" firstAttribute="centerY" secondItem="D5P-x2-Ip7" secondAttribute="centerY" id="zRy-F0-1iI"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wdh-k5-w9w" secondAttribute="trailing" constant="8" id="6uy-e6-k98"/>
+                                        <constraint firstItem="im7-oL-c35" firstAttribute="centerY" secondItem="D5P-x2-Ip7" secondAttribute="centerY" id="Kx7-9I-Ntr"/>
+                                        <constraint firstItem="las-M4-8Ya" firstAttribute="trailing" secondItem="D5P-x2-Ip7" secondAttribute="trailingMargin" constant="8" id="Rle-aI-ThH"/>
+                                        <constraint firstItem="las-M4-8Ya" firstAttribute="centerY" secondItem="D5P-x2-Ip7" secondAttribute="centerY" id="Zhh-e0-qWK"/>
+                                        <constraint firstItem="Wdh-k5-w9w" firstAttribute="centerY" secondItem="D5P-x2-Ip7" secondAttribute="centerY" id="bqC-wH-Pwt"/>
+                                        <constraint firstItem="im7-oL-c35" firstAttribute="trailing" secondItem="D5P-x2-Ip7" secondAttribute="trailingMargin" constant="8" id="qX9-QJ-IZT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="fillChechmarkButton" destination="4rP-7e-bS2" id="8iy-bX-JWs"/>
-                                    <outlet property="nameTaskLabel" destination="lV0-iH-hQN" id="6nh-vj-8dX"/>
-                                    <outlet property="sealChecmarkButton" destination="M4I-0o-gvr" id="55F-9A-o3X"/>
+                                    <outlet property="imgFillCheckmark" destination="Wdh-k5-w9w" id="t33-yu-oCo"/>
+                                    <outlet property="imgSealCheckmark" destination="im7-oL-c35" id="6lR-mi-Z2T"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -69,7 +74,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="p7t-26-vFr">
                                 <rect key="frame" x="20" y="11" width="75" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="arrowshape.turn.up.left" catalog="system"/>
+                                <state key="normal" title="           " image="arrowshape.turn.up.left" catalog="system"/>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Sqe-nK-Vxe">
@@ -83,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1497.1014492753625" y="-72.321428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="b7o-6O-lPq">
             <objects>
-                <viewController storyboardIdentifier="noteVC" modalPresentationStyle="fullScreen" id="vJ2-zo-A0C" customClass="ViewController" customModule="ToDoList_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="noteVC" modalPresentationStyle="fullScreen" id="vJ2-zo-A0C" customClass="CreateTaskViewController" customModule="ToDoList_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BMK-cs-9jr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
